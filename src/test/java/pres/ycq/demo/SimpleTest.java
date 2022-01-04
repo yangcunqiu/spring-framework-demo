@@ -10,6 +10,6 @@ public class SimpleTest {
     public void test(){
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("application.xml");
         User user = (User) context.getBean("user");
-        System.out.print("---");
+        System.out.println("---");
     }
 }
