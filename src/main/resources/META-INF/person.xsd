@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns:tns = "http://www.ycq.pres/schema/person"
+            targetNamespace="http://www.ycq.pres/schema/person"
+            elementFormDefault="qualified">
+
+    <xsd:element name="zml">
+        <xsd:complexType>
+            <xsd:attribute name="id" type="xsd:string"/>
+            <xsd:attribute name="username" type="xsd:string"/>
+            <xsd:attribute name="password" type="xsd:string"/>
+            <xsd:attribute name="location" type="xsd:string"/>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

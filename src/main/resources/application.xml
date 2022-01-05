@@ -1,14 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans
-        https://www.springframework.org/schema/beans/spring-beans.xsd">
+<beans  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.springframework.org/schema/beans"
+        xmlns:context = "http://www.springframework.org/schema/context"
+        xmlns:person = "http://www.ycq.pres/schema/person"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd
+        http://www.ycq.pres/schema/person
+        https://www.ycq.pres/schema/person.xsd">
+
+    <!--自定义标签解析: <zml:person username='' password='' location=''>-->
+    <person:zml id="person" username="赵鸣柳" password="zml" location="xsmz"/>
+
+    <!--<context:property-placeholder location="application.xml"/>-->
 
     <bean id="user" class="pres.ycq.demo.module.User">
         <property name="name" value="赵鸣柳"/>
         <property name="age" value="25"/>
     </bean>
-
 
 </beans>
 
