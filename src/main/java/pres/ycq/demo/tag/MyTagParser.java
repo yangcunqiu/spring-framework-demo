@@ -11,11 +11,13 @@ import org.w3c.dom.Element;
  */
 public class MyTagParser extends AbstractSingleBeanDefinitionParser {
 
+    // 返回要解析成哪个对象的class
     @Override
     protected Class<?> getBeanClass(Element element) {
         return Person.class;
     }
 
+    // 自定义解析
     @Override
     protected void doParse(Element element, BeanDefinitionBuilder builder) {
         String username = element.getAttribute("username");
