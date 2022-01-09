@@ -10,6 +10,5 @@ public class MyClassPathXmlApplicationContextTest {
     public void test(){
         MyClassPathXmlApplicationContext context = new MyClassPathXmlApplicationContext("application.xml");
         User user = (User) context.getBean("user");
-        System.out.println("---");
     }
 }

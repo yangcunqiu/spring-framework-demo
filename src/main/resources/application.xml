@@ -13,7 +13,12 @@
     <!--自定义标签解析: <zml:person username='' password='' location=''>-->
     <person:zml id="person" username="赵鸣柳" password="zml" location="xsmz"/>
 
-    <!--<context:property-placeholder location="application.xml"/>-->
+    <context:property-placeholder location="jdbc.properties"/>
+
+    <context:component-scan base-package="pres.ycq.demo"/>
+
+    <!--通过xml声明bean的方法注册自定义BeanFactoryPostProcessor-->
+    <!--<bean id="postProcessor" class="pres.ycq.demo.config.MyBeanDefinitionRegistryPostProcessor"/>-->
 
     <bean id="user" class="pres.ycq.demo.module.User">
         <property name="name" value="赵鸣柳"/>

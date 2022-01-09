@@ -12,7 +12,7 @@ public class MyClassPathXmlApplicationContext extends ClassPathXmlApplicationCon
     @Override
     protected void initPropertySources() {
         // 设置Spring容器启动时必须的环境参数, Spring会进行校验
-        getEnvironment().setRequiredProperties("abc");
+        getEnvironment().setRequiredProperties("username");
     }
 
     @Override
@@ -23,5 +23,7 @@ public class MyClassPathXmlApplicationContext extends ClassPathXmlApplicationCon
         setAllowCircularReferences(false);
         // 调用父类方法将自定义的属性设置到beanFactory中
         super.customizeBeanFactory(beanFactory);
+        // 通过add方法向工厂注册自定义BeanFactoryPostProcessor
+        this.addBeanFactoryPostProcessor(new MyBeanDefinitionRegistryPostProcessor());
     }
 }
